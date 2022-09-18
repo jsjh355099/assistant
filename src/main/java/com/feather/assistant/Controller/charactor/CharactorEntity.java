@@ -1,6 +1,5 @@
-package com.feather.assistant.charactor;
+package com.feather.assistant.Controller.charactor;
 
-import javax.persistence.Entity;
 import javax.persistence.Table;
 
 //@Entity

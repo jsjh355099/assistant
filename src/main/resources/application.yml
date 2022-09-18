@@ -1,8 +1,15 @@
 server:
-  port: 8080
+  port: 80
 
 spring:
   datasource:
     url: jdbc:mysql://localhost:3306/feather
-    user: root
+    username: root
     password: Soral1024
+  jpa:
+    show-sql: true
+
+  # Spring Boot 2.6及以后，只要是Spring Boot 2.6引入的新PathPatternParser导致的。
+  mvc:
+    pathmatch:
+      matching-strategy: ant_path_matcher
