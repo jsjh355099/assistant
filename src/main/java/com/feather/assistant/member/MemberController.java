@@ -1,7 +1,7 @@
 package com.feather.assistant.member;
 
 import com.feather.assistant.$Entity.MemberEntity;
-import com.feather.assistant.$CommonFIle.FeatherApiResponse;
+import com.feather.assistant.$CommonFIle.AssistantApiResponse;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -16,13 +16,13 @@ public class MemberController {
     MemberRepository memberRepository;
 
 
-    @FeatherApiResponse
+    @AssistantApiResponse
     @GetMapping("/ls")
     public List<MemberEntity> getAllMember() {
         return memberRepository.findAll();
     }
 
-    @FeatherApiResponse
+    @AssistantApiResponse
     @PostMapping("/s")
     public void setMember(@RequestBody MemberEntity memberEntity) {
         memberRepository.save(memberEntity);

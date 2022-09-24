@@ -42,6 +42,7 @@ dependencies {
 	implementation 'io.springfox:springfox-swagger-ui:3.0.0'
 
 	compileOnly 'org.projectlombok:lombok'
+//	compileOnly "org.flywaydb:flyway-mysql"
 	developmentOnly 'org.springframework.boot:spring-boot-devtools'
 	runtimeOnly 'mysql:mysql-connector-java'
 	annotationProcessor 'org.springframework.boot:spring-boot-configuration-processor'

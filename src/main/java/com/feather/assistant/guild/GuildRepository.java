@@ -1,7 +1,12 @@
 package com.feather.assistant.guild;
 
-import org.springframework.stereotype.Repository;
+import com.feather.assistant.$Entity.GuildEntity;
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 
-@Repository
-public class GuildRepository {
+import java.util.List;
+
+@EnableJpaRepositories
+public interface GuildRepository extends JpaRepository<GuildEntity,Integer> {
+    List<GuildEntity> findAll();
 }

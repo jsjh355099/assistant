@@ -10,10 +10,10 @@ import javax.persistence.*;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-@Table(name = "buffer")
-public class BufferEntity {
+@Table(name = "equipment")
+public class EquipmentEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "id_buffer")
-    private Integer id_buffer;
+    @Column(name = "id_equipment")
+    private Integer id_equipment;
 }

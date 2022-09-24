@@ -1,7 +1,7 @@
 package com.feather.assistant.event;
 
 import com.feather.assistant.$Entity.EventEntity;
-import com.feather.assistant.$CommonFIle.FeatherApiResponse;
+import com.feather.assistant.$CommonFIle.AssistantApiResponse;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -14,13 +14,13 @@ public class EventController {
     EventRepository eventRepository;
 
 
-    @FeatherApiResponse
+    @AssistantApiResponse
     @GetMapping("/ls")
     public List<EventEntity> getAllEvent() {
         return eventRepository.findAll();
     }
 
-    @FeatherApiResponse
+    @AssistantApiResponse
     @PostMapping("/s")
     public void setEvent(@RequestBody EventEntity eventEntity) {
         eventRepository.save(eventEntity);

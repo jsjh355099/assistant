@@ -1,7 +1,7 @@
 package com.feather.assistant.account;
 
 import com.feather.assistant.$Entity.AccountEntity;
-import com.feather.assistant.$CommonFIle.FeatherApiResponse;
+import com.feather.assistant.$CommonFIle.AssistantApiResponse;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -14,13 +14,13 @@ public class AccountController {
     AccountRepository accountRepository;
 
 
-    @FeatherApiResponse
+    @AssistantApiResponse
     @GetMapping("/ls")
     public List<AccountEntity> getAllAccount() {
         return accountRepository.findAll();
     }
 
-    @FeatherApiResponse
+    @AssistantApiResponse
     @PostMapping("/s")
     public void setAccount(@RequestBody AccountEntity accountEntity) {
         accountRepository.save(accountEntity);

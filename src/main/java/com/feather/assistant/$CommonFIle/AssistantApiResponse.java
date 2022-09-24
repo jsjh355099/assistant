@@ -17,6 +17,6 @@ import java.lang.annotation.*;
         @ApiResponse(code = 405, message = "方法不被允許(Method not allowed)"),
         @ApiResponse(code = 500, message = "伺服器錯誤(Internal Server Error)"),
         @ApiResponse(code = 503, message = "伺服器無法使用(Service Unavailable)")})
-public @interface FeatherApiResponse {
+public @interface AssistantApiResponse {
     ResponseHeader[] responseHeaders() default @ResponseHeader(name = "", response = Void.class);
 }

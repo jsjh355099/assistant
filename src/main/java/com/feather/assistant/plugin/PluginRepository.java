@@ -1,4 +1,4 @@
-package com.feather.assistant.Plugin;
+package com.feather.assistant.plugin;
 
 public class PluginRepository {
 }

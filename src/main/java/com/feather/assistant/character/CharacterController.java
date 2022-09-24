@@ -2,7 +2,7 @@ package com.feather.assistant.character;
 
 import com.feather.assistant.character.CharacterDto.CharacterDto;
 import com.feather.assistant.character.CharacterService.CharacterService;
-import com.feather.assistant.$CommonFIle.FeatherApiResponse;
+import com.feather.assistant.$CommonFIle.AssistantApiResponse;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -15,7 +15,7 @@ public class CharacterController {
     @Autowired
     CharacterService characterService;
 
-    @FeatherApiResponse
+    @AssistantApiResponse
     @GetMapping("/ls")
     public List<CharacterDto> getAllCharacter() {
         return characterService.findAll();
