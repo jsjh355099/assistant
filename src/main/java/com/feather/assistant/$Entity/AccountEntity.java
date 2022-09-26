@@ -22,9 +22,9 @@ public class AccountEntity {
     private Boolean status;
 
     @Column(name = "id_member")
-    private Boolean id_member;
+    private Integer id_member;
 
     @Column(name = "comments")
-    private Boolean comments;// 此為方便分辨帳號使用，請勿填入真實帳號。
+    private String comments;// 此為方便分辨帳號使用，請勿填入真實帳號。
 
 }

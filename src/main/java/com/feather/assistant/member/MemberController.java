@@ -2,6 +2,8 @@ package com.feather.assistant.member;
 
 import com.feather.assistant.$Entity.MemberEntity;
 import com.feather.assistant.$CommonFIle.AssistantApiResponse;
+import com.feather.assistant.member.MemberDto.MemberDto;
+import com.feather.assistant.member.MemberService.MemberService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -14,6 +16,8 @@ import static java.time.LocalDateTime.now;
 public class MemberController {
     @Autowired
     MemberRepository memberRepository;
+    @Autowired
+    MemberService memberService;
 
 
     @AssistantApiResponse
@@ -23,12 +27,19 @@ public class MemberController {
     }
 
     @AssistantApiResponse
+    @GetMapping("/lsd")
+    public List<MemberDto> getAllMemberDto() {
+        return memberService.findAll();
+    }
+
+
+    @AssistantApiResponse
     @PostMapping("/s")
-    public void setMember(@RequestBody MemberEntity memberEntity) {
+    public void saveMember(@RequestBody MemberEntity memberEntity) {
         memberRepository.save(memberEntity);
     }
 
-    @DeleteMapping("/d")
+    @DeleteMapping("/rm")
     public void deleteMember(@RequestParam("id_member") Integer id_member) {
         memberRepository.deleteById(id_member);
     }

@@ -26,7 +26,7 @@ public class EventController {
         eventRepository.save(eventEntity);
     }
 
-    @DeleteMapping("/d")
+    @DeleteMapping("/rm")
     public void deleteEvent(@RequestParam("id_event") Integer id_event) {
         eventRepository.deleteById(id_event);
     }

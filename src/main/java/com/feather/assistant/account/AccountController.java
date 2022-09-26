@@ -13,7 +13,6 @@ public class AccountController {
     @Autowired
     AccountRepository accountRepository;
 
-
     @AssistantApiResponse
     @GetMapping("/ls")
     public List<AccountEntity> getAllAccount() {
@@ -26,7 +25,7 @@ public class AccountController {
         accountRepository.save(accountEntity);
     }
 
-    @DeleteMapping("/d")
+    @DeleteMapping("/rm")
     public void deleteAccount(@RequestParam("id_account") Integer id_account) {
         accountRepository.deleteById(id_account);
     }
