@@ -9,8 +9,6 @@ import java.sql.Timestamp;
 
 @Entity
 @Data
-@AllArgsConstructor
-@NoArgsConstructor
 @Table(name = "event")
 public class EventEntity {
 

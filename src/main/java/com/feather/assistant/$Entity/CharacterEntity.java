@@ -9,8 +9,6 @@ import java.sql.Timestamp;
 
 @Entity
 @Data
-@AllArgsConstructor
-@NoArgsConstructor
 @Table(name = "character")
 public class CharacterEntity {
 

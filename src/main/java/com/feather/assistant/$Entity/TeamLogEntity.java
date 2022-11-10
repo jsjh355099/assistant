@@ -8,18 +8,19 @@ import javax.persistence.*;
 
 @Entity
 @Data
-@AllArgsConstructor
-@NoArgsConstructor
 @Table(name = "team")
 public class TeamLogEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id_team")
     private Integer id_team;
+
     @Column(name = "name")
     private String name;
+
     @Column(name = "id_event")
     private Integer id_event;
+
     @Column(name = "member_charactor_0")
     private Integer member_charactor_0;
     @Column(name = "member_charactor_1")

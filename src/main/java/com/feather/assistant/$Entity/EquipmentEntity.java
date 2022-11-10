@@ -8,12 +8,13 @@ import javax.persistence.*;
 
 @Entity
 @Data
-@AllArgsConstructor
-@NoArgsConstructor
 @Table(name = "equipment")
 public class EquipmentEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id_equipment")
-    private Integer id_equipment;
+    private String id_equipment;
+
+    @Column(name = "name")
+    private Integer name;
 }
